@@ -2,6 +2,7 @@ using System;
 using System.Reflection;
 using System.Text;
 using MelonLoader;
+using Harmony;
 using UnityEngine;
 
 [assembly: MelonInfo(typeof(HWIDPatch.HwidPatchMod), "HWIDPatch", "1.0.2", "knah")]
@@ -24,7 +25,7 @@ namespace HWIDPatch
 
                 if (string.IsNullOrEmpty(generatedHwid) || generatedHwid.Length != SystemInfo.deviceUniqueIdentifier.Length)
                 {
-                    var random = new System.Random(Environment.TickCount);
+                    var random = new Random(Environment.TickCount);
                     var bytes = new byte[SystemInfo.deviceUniqueIdentifier.Length / 2];
                     random.NextBytes(bytes);
 
@@ -55,7 +56,7 @@ namespace HWIDPatch
         private static bool DeviceIdPrefix(ref string __result)
         {
             __result = generatedHwid;
-            return false; // skip original
+            return false; // Skip original method
         }
     }
 }

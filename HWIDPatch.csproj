@@ -17,11 +17,11 @@
 
   <ItemGroup>
     <Reference Include="MelonLoader">
-      <HintPath>D:\SteamLibrary\steamapps\common\UberStrike\MelonLoader\MelonLoader.dll</HintPath>
+      <HintPath>Libs\MelonLoader.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>D:\SteamLibrary\steamapps\common\UberStrike\UberStrike_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>Libs\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
